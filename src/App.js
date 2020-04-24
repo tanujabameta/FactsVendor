@@ -21,7 +21,7 @@ class App extends Component {
 
   fetchFact= arg=>{
     console.log(arg);
-    fetch('http://numberapi.com/' + arg)
+    fetch('https://cors-anywhere.herokuapp.com/http://numberapi.com/' + arg)
     .then(res => res.text())
     .then(fact=> this.setState({Fact:fact}))
     .catch(e => console.log(e))
