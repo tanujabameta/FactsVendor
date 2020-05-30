@@ -21,8 +21,8 @@ class App extends Component {
 
   fetchFact= arg=>{
     console.log(arg);
-    fetch('https://cors-anywhere.herokuapp.com/http://numberapi.com/' + arg, {
-    crossDomain:true
+    fetch('https://cors-anywhere.herokuapp.com/http://numberapi.com/' + arg,{
+      mode: 'no-cors' // 'cors' by default
     })
     .then(res => res.text())
     .then(fact=> this.setState({Fact:fact}))
